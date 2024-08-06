@@ -7,13 +7,15 @@ import 'package:fishery_management_admin/presentation/widgets/drawer_widget.dart
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
   int _currentIndex = 0;
-  final tabs = [const FarmerTab(), const FishTab(), const TempTab()];
+  final tabs = [const FishTab(), const TempTab()];
 
   @override
   Widget build(BuildContext context) {
@@ -45,20 +47,11 @@ class _HomePageState extends State<HomePage> {
                 BottomNavigationBarItem(
                   backgroundColor: secondaryColor,
                   icon: Image.asset(
-                    'assets/images/farmer.png',
+                    'assets/images/logo.png',
                     color: Colors.white,
                     height: 30,
                   ),
-                  label: 'Farmers',
-                ),
-                BottomNavigationBarItem(
-                  backgroundColor: secondaryColor,
-                  icon: Image.asset(
-                    'assets/images/fish.png',
-                    color: Colors.white,
-                    height: 30,
-                  ),
-                  label: 'Fishes',
+                  label: 'Soils',
                 ),
                 BottomNavigationBarItem(
                   backgroundColor: secondaryColor,

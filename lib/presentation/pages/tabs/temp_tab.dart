@@ -42,10 +42,15 @@ class TempTab extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         TextRegular(
-                            text: data.docs[index]['time'] +
-                                ' - ' +
-                                data.docs[index]['temp'] +
-                                '°C',
+                            text: 'PH Level: ${data.docs[index]['temp']}',
+                            fontSize: 12,
+                            color: Colors.green),
+                        TextRegular(
+                            text: 'NPK: ${data.docs[index]['temp']}',
+                            fontSize: 12,
+                            color: Colors.green),
+                        TextRegular(
+                            text: 'Soil Moisture: ${data.docs[index]['temp']}',
                             fontSize: 12,
                             color: Colors.green),
                       ],

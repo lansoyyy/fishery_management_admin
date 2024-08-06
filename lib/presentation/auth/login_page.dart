@@ -11,6 +11,8 @@ import 'package:get_storage/get_storage.dart';
 import '../pages/home_page.dart';
 
 class LogInPage extends StatefulWidget {
+  const LogInPage({super.key});
+
   @override
   State<LogInPage> createState() => _LogInPageState();
 }
@@ -128,7 +130,7 @@ class _LogInPageState extends State<LogInPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextBold(
-                      text: 'Fishery Management',
+                      text: 'Soil Monitoring',
                       fontSize: 28,
                       color: Colors.black),
                 ],
@@ -206,8 +208,8 @@ class _LogInPageState extends State<LogInPage> {
                   onPressed: () {
                     if (box.read('username') == myUsername &&
                         box.read('password') == myPassword) {
-                      Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(builder: (context) => HomePage()));
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) => const HomePage()));
                     } else {
                       showDialog(
                           context: context,
@@ -223,7 +225,7 @@ class _LogInPageState extends State<LogInPage> {
                                   style: TextStyle(fontFamily: 'QRegular'),
                                 ),
                                 actions: <Widget>[
-                                  FlatButton(
+                                  MaterialButton(
                                     onPressed: () =>
                                         Navigator.of(context).pop(true),
                                     child: const Text(
@@ -494,7 +496,7 @@ class _LogInPageState extends State<LogInPage> {
                                                                 'QRegular'),
                                                       ),
                                                       actions: <Widget>[
-                                                        FlatButton(
+                                                        MaterialButton(
                                                           onPressed: () {
                                                             box.write(
                                                                 'name', name);
@@ -530,7 +532,7 @@ class _LogInPageState extends State<LogInPage> {
                                                                     MaterialPageRoute(
                                                                         builder:
                                                                             (context) =>
-                                                                                LogInPage()));
+                                                                                const LogInPage()));
                                                           },
                                                           child: const Text(
                                                             'Continue',
