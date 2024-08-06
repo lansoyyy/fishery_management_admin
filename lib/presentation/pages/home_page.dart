@@ -56,11 +56,11 @@ class _HomePageState extends State<HomePage> {
                 BottomNavigationBarItem(
                   backgroundColor: secondaryColor,
                   icon: Image.asset(
-                    'assets/images/temp.png',
+                    'assets/images/logo.png',
                     color: Colors.white,
                     height: 30,
                   ),
-                  label: 'Temperatures',
+                  label: 'Data',
                 )
               ]),
         ),
